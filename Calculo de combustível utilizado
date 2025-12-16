@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite o tempo gasto na viagem (em horas): ");
+        double tempo = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Digite a velocidade média (em km/h): ");
+        double velocidade = Convert.ToDouble(Console.ReadLine());
+
+
+        double distancia = tempo * velocidade;
+
+        // Cálculo dos litros usados (12 km por litro)
+        double litrosUsados = distancia / 12;
+
+        Console.WriteLine("\n----- RESULTADOS DA VIAGEM -----");
+        Console.WriteLine($"Velocidade média: {velocidade} km/h");
+        Console.WriteLine($"Tempo gasto na viagem: {tempo} horas");
+        Console.WriteLine($"Distância percorrida: {distancia:F2} km");
+        Console.WriteLine($"Quantidade de litros usados: {litrosUsados:F2} L");
+    }
+}
