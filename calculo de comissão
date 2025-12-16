@@ -1,0 +1,36 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Leitura da identificação do vendedor
+        Console.Write("Identificação do vendedor: ");
+        string vendedor = Console.ReadLine();
+
+        // Leitura do código da peça
+        Console.Write("Código da peça: ");
+        string codigoPeca = Console.ReadLine();
+
+        // Leitura do preço unitário
+        Console.Write("Preço unitário da peça: ");
+        double precoUnitario = Convert.ToDouble(Console.ReadLine());
+
+        // Leitura da quantidade vendida
+        Console.Write("Quantidade vendida: ");
+        int quantidade = Convert.ToInt32(Console.ReadLine());
+
+        // Cálculo do total da venda
+        double totalVenda = precoUnitario * quantidade;
+
+        // Cálculo da comissão (5%)
+        double comissao = totalVenda * 0.05;
+
+        // Exibindo os resultados
+        Console.WriteLine("\n===== RELATÓRIO DA VENDA =====");
+        Console.WriteLine($"Vendedor: {vendedor}");
+        Console.WriteLine($"Código da peça: {codigoPeca}");
+        Console.WriteLine($"Total da venda: R$ {totalVenda:F2}");
+        Console.WriteLine($"Comissão (5%): R$ {comissao:F2}");
+    }
+}
